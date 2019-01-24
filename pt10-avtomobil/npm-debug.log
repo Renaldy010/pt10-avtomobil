@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@1.2.17
+3 info using node@v0.10.3
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose read json D:\pert10\package.json
+6 warn package.json MCC@0.0.0 No README.md file found!
+7 verbose run-script [ 'prestart', 'start', 'poststart' ]
+8 info prestart MCC@0.0.0
+9 info start MCC@0.0.0
+10 verbose unsafe-perm in lifecycle true
+11 silly exec cmd "/c" "node ./bin/www"
+12 silly cmd,/c,node ./bin/www,D:\pert10 spawning
+13 info MCC@0.0.0 Failed to exec start script
+14 error MCC@0.0.0 start: `node ./bin/www`
+14 error `cmd "/c" "node ./bin/www"` failed with 8
+15 error Failed at the MCC@0.0.0 start script.
+15 error This is most likely a problem with the MCC package,
+15 error not with npm itself.
+15 error Tell the author that this fails on your system:
+15 error     node ./bin/www
+15 error You can get their info via:
+15 error     npm owner ls MCC
+15 error There is likely additional logging output above.
+16 error System Windows_NT 6.1.7601
+17 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+18 error cwd D:\pert10
+19 error node -v v0.10.3
+20 error npm -v 1.2.17
+21 error code ELIFECYCLE
+22 verbose exit [ 1, true ]

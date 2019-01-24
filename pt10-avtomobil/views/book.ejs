@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="stylesheets/themes/test.min.css"/>
+    <link rel="stylesheet" href="stylesheets/themes/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="stylesheets/jquery.mobile.structure-1.4.5.min.css"/>
+    <script src="javascripts/jquery-1.11.1.min.js"></script>
+    <script src="javascripts/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<form action="/doInsert" data-ajax="false" method="post">
+		nama buku:<input type="text" name="bookName">
+		harga buku:<input type="number" name="bookPrice">
+		<input type="submit" value="Add Book"> 
+	</form>
+
+	<div>
+
+					<br><h3 style="text-align:center;">View Data</h3><br>
+
+					
+			<%
+				for(var i = 0; i < data.length; i++){
+			%>
+					<li style="text-align:center;">
+						<%= data[i].bookID %><br>
+						book name: <%= data[i].bookName %><br>
+						book price: <%= data[i].bookPrice %>
+						<br>
+						<button onclick="deleteBook('<%= data[i].bookID %>')">Delete</button>
+						<button onclick="editbook('<%= data[i].bookID %>')">Edit</button>
+					</li>
+			<%
+				}
+			%>	
+	</div>
+</body>
+
+<script>
+	function deleteBook(id)
+	{
+		window.location.href="/doDelete?bookID="+id;
+	}
+
+	function editbook(id)
+	{
+		//alert(id);
+		 window.location.href="/doEdit?bookID="+id;
+		
+	}
+
+
+
+
+
+
+</script>
+
+</html>
